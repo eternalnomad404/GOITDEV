@@ -5,62 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myra Pillai - Portfolio</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B6B',secondary:'#4ECDC4'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <script src="js/tailwind.config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-        .progress-bar {
-            position: relative;
-            height: 8px;
-            border-radius: 4px;
-            background-color: #f3f4f6;
-            overflow: hidden;
-        }
-        .progress-bar-fill {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            border-radius: 4px;
-            transition: width 1.5s ease-out;
-        }
-        .avatar-container {
-            transition: transform 0.3s ease;
-        }
-        .avatar-container:hover {
-            transform: scale(1.03);
-        }
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-        .section {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        .section.visible {
-            animation: fadeIn 0.8s ease forwards;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-white">
     <div class="flex flex-col md:flex-row min-h-screen">
@@ -206,44 +157,6 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate progress bars
-            const progressBars = document.querySelectorAll('.progress-bar-fill');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target;
-                        const width = target.getAttribute('data-width');
-                        setTimeout(() => {
-                            target.style.width = width;
-                        }, 300);
-                        observer.unobserve(target);
-                    }
-                });
-            }, { threshold: 0.2 });
-            
-            progressBars.forEach(bar => {
-                observer.observe(bar);
-            });
-            
-            // Animate sections on scroll
-            const sections = document.querySelectorAll('.section');
-            
-            const sectionObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        sectionObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            sections.forEach(section => {
-                sectionObserver.observe(section);
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
