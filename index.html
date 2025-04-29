@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myra Pillai - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B6B',secondary:'#4ECDC4'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .progress-bar {
+            position: relative;
+            height: 8px;
+            border-radius: 4px;
+            background-color: #f3f4f6;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1.5s ease-out;
+        }
+        .avatar-container {
+            transition: transform 0.3s ease;
+        }
+        .avatar-container:hover {
+            transform: scale(1.03);
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .section.visible {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Left Sidebar -->
+        <div class="w-full md:w-1/3 bg-gray-50 p-8 flex flex-col">
+            <div class="mb-6 animate-fade-in" style="animation-delay: 0.1s;">
+                <div class="text-gray-500 mb-2">Hey, My name is</div>
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Myra Pillai</h1>
+            </div>
+            
+            <div class="avatar-container mb-8 animate-fade-in" style="animation-delay: 0.2s;">
+                <div class="rounded-lg overflow-hidden bg-white shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=Minimalist%20illustration%20portrait%20of%20a%20young%20woman%20with%20long%20hair%20wearing%20a%20turquoise%20beanie%20and%20orange%20jacket%2C%20simple%20line%20art%20style%20with%20soft%20pastel%20background%2C%20professional%20portfolio%20avatar&width=400&height=400&seq=1&orientation=squarish" alt="Myra Pillai" class="w-full h-auto">
+                </div>
+            </div>
+            
+            <div class="text-gray-700 space-y-4 animate-fade-in" style="animation-delay: 0.3s;">
+                <p>I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development.</p>
+                <p>When I'm not at the computer, I'm usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds.</p>
+                <p>Fast-forward to today, and I've had the privilege of building software for an advertising agency, a creative design studio, and a large corporation.</p>
+            </div>
+            
+            <div class="mt-auto pt-8 flex space-x-4 animate-fade-in" style="animation-delay: 0.4s;">
+                <a href="#" class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-sm hover:shadow-md transition-all">
+                    <i class="ri-linkedin-line text-gray-700"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-sm hover:shadow-md transition-all">
+                    <i class="ri-github-line text-gray-700"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-sm hover:shadow-md transition-all">
+                    <i class="ri-twitter-line text-gray-700"></i>
+                </a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-sm hover:shadow-md transition-all">
+                    <i class="ri-dribbble-line text-gray-700"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="w-full md:w-2/3 p-8 overflow-y-auto">
+            <!-- Professional Experience -->
+            <section class="mb-12 section">
+                <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-primary">Professional Experience</h2>
+                
+                <div class="space-y-8">
+                    <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-medium text-gray-900">Orchid, Inc</h3>
+                            <span class="text-sm text-gray-500">January, 2013-Present</span>
+                        </div>
+                        <div class="mb-2 text-lg font-medium text-primary">Creative Director</div>
+                        <p class="text-gray-700">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-medium text-gray-900">Amazon</h3>
+                            <span class="text-sm text-gray-500">March'11-December'12</span>
+                        </div>
+                        <div class="mb-2 text-lg font-medium text-primary">Creative Director</div>
+                        <p class="text-gray-700">Even the all-powerful Pointing has no control about the blind texts; it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-medium text-gray-900">Click media</h3>
+                            <span class="text-sm text-gray-500">October'10-March'12</span>
+                        </div>
+                        <div class="mb-2 text-lg font-medium text-primary">System Analyst</div>
+                        <p class="text-gray-700">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Our Achievement -->
+            <section class="mb-12 section">
+                <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-primary">Our Achievement</h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-gray-500 mb-1">December 2014</div>
+                        <p class="text-gray-800 font-medium">Audited 120 number of clients in only 3 amount of time</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <p class="text-gray-800 font-medium">Held a perfect attendance record</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Professional Summary -->
+            <section class="mb-12 section">
+                <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-primary">Professional Summary</h2>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm space-y-4">
+                    <p class="text-gray-700">Skilled in growing engagement and staying on top of the latest trends to improve brand growth.</p>
+                    
+                    <p class="text-gray-700">Have CPR certification and am well-versed in food safety techniques from helping in my grandparents' restaurant.</p>
+                    
+                    <p class="text-gray-700">Excellent understanding of standard survey methods and quantitative analysis.</p>
+                </div>
+            </section>
+            
+            <!-- Professional Skills -->
+            <section class="mb-12 section">
+                <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-primary">Professional Skills</h2>
+                
+                <div class="space-y-6 bg-white rounded-lg p-6 shadow-sm">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-primary">Marketing</span>
+                            <span class="text-gray-600">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill bg-primary" style="width: 0%;" data-width="90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-primary">Planning</span>
+                            <span class="text-gray-600">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill bg-primary" style="width: 0%;" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Education Details -->
+            <section class="mb-12 section">
+                <h2 class="text-2xl font-semibold mb-6 pb-2 border-b-2 border-primary">Education Details</h2>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="mb-2">
+                        <h3 class="text-xl font-medium text-primary">Masters Degree of Design</h3>
+                        <div class="text-gray-500 mb-2">June-2014</div>
+                    </div>
+                    <p class="text-gray-700">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate progress bars
+            const progressBars = document.querySelectorAll('.progress-bar-fill');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const width = target.getAttribute('data-width');
+                        setTimeout(() => {
+                            target.style.width = width;
+                        }, 300);
+                        observer.unobserve(target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            progressBars.forEach(bar => {
+                observer.observe(bar);
+            });
+            
+            // Animate sections on scroll
+            const sections = document.querySelectorAll('.section');
+            
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
